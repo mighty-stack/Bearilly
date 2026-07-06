@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "https://bearilly-server.onrender.com/api";
+  import.meta.env.VITE_API_BASE_URL;
 
 const TOKEN_KEY =
   import.meta.env.VITE_TOKEN_KEY || "Bearilly_auth_token";
