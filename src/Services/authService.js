@@ -73,17 +73,17 @@ const saveAuthSession = (session) => {
 };
 
 const register = async (payload) => {
-  const response = await api.post("auth/register", payload);
+  const response = await api.post("api/auth/register", payload);
   return saveAuthSession(normalizeAuthResponse(response));
 };
 
 const login = async (payload) => {
-  const response = await api.post("/auth/login", payload);
+  const response = await api.post("api/auth/login", payload);
   return saveAuthSession(normalizeAuthResponse(response));
 };
 
 const verifyAccessCode = async (code) => {
-  const response = await api.post("/auth/access-code", { code });
+  const response = await api.post("api/auth/access-code", { code });
   const data = unwrapData(response);
   const accepted = data?.valid ?? data?.accepted ?? true;
 
