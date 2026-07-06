@@ -1,10 +1,10 @@
 import axios from "axios";
 
 const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "https://bearilly-server.onrender.com";
+  import.meta.env.VITE_API_BASE_URL || "https://bearilly-server.onrender.com/api";
 
 const TOKEN_KEY =
-  import.meta.env.VITE_TOKEN_KEY || "skillpath_auth_token";
+  import.meta.env.VITE_TOKEN_KEY || "Bearilly_auth_token";
 
 export const getStoredToken = () => {
   if (typeof window === "undefined") return null;
