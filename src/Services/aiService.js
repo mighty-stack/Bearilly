@@ -6,7 +6,7 @@ const sendTutorMessage = async ({
   lessonId,
   context,
 }) => {
-  const response = await api.post("/ai/tutor/chat", {
+  const response = await api.post("/api/ai/tutor/chat", {
     message,
     conversationId,
     lessonId,
@@ -17,24 +17,24 @@ const sendTutorMessage = async ({
 };
 
 const getTutorConversations = async () => {
-  const response = await api.get("/ai/tutor/conversations");
+  const response = await api.get("/api/ai/tutor/conversations");
   return unwrapData(response);
 };
 
 const getTutorConversationById = async (conversationId) => {
-  const response = await api.get(`/ai/tutor/conversations/${conversationId}`);
+  const response = await api.get(`/api/ai/tutor/conversations/${conversationId}`);
   return unwrapData(response);
 };
 
 const deleteTutorConversation = async (conversationId) => {
   const response = await api.delete(
-    `/ai/tutor/conversations/${conversationId}`,
+    `/api/ai/tutor/conversations/${conversationId}`,
   );
   return unwrapData(response);
 };
 
 const getSuggestedPrompts = async (params = {}) => {
-  const response = await api.get("/ai/tutor/prompts", { params });
+  const response = await api.get("/api/ai/tutor/prompts", { params });
   return unwrapData(response);
 };
 

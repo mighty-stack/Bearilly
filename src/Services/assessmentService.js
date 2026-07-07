@@ -1,37 +1,37 @@
 import api, { unwrapData } from "./api";
 
 const getAssessments = async (params = {}) => {
-  const response = await api.get("/assessments", { params });
+  const response = await api.get("/api/assessments", { params });
   return unwrapData(response);
 };
 
 const getAssessmentById = async (assessmentId) => {
-  const response = await api.get(`/assessments/${assessmentId}`);
+  const response = await api.get(`/api/assessments/${assessmentId}`);
   return unwrapData(response);
 };
 
 const createAssessment = async (payload) => {
-  const response = await api.post("/assessments", payload);
+  const response = await api.post("/api/assessments", payload);
   return unwrapData(response);
 };
 
 const updateAssessment = async (assessmentId, payload) => {
-  const response = await api.patch(`/assessments/${assessmentId}`, payload);
+  const response = await api.patch(`/api/assessments/${assessmentId}`, payload);
   return unwrapData(response);
 };
 
 const deleteAssessment = async (assessmentId) => {
-  const response = await api.delete(`/assessments/${assessmentId}`);
+  const response = await api.delete(`/api/assessments/${assessmentId}`);
   return unwrapData(response);
 };
 
 const publishAssessment = async (assessmentId) => {
-  const response = await api.post(`/assessments/${assessmentId}/publish`);
+  const response = await api.post(`/api/assessments/${assessmentId}/publish`);
   return unwrapData(response);
 };
 
 const getAssessmentSubmissions = async (assessmentId, params = {}) => {
-  const response = await api.get(`/assessments/${assessmentId}/submissions`, {
+  const response = await api.get(`/api/assessments/${assessmentId}/submissions`, {
     params,
   });
   return unwrapData(response);

@@ -17,17 +17,17 @@ const toSubmissionFormData = (payload) => {
 };
 
 const getMySubmissions = async (params = {}) => {
-  const response = await api.get("/submissions/me", { params });
+  const response = await api.get("/api/submissions/me", { params });
   return unwrapData(response);
 };
 
 const getSubmissions = async (params = {}) => {
-  const response = await api.get("/submissions", { params });
+  const response = await api.get("/api/submissions", { params });
   return unwrapData(response);
 };
 
 const getSubmissionById = async (submissionId) => {
-  const response = await api.get(`/submissions/${submissionId}`);
+  const response = await api.get(`/api/submissions/${submissionId}`);
   return unwrapData(response);
 };
 
@@ -35,7 +35,7 @@ const createSubmission = async (payload) => {
   const hasFile = Boolean(payload.file || payload.files);
   const body = hasFile ? toSubmissionFormData(payload) : payload;
 
-  const response = await api.post("/submissions", body, {
+  const response = await api.post("/api/submissions", body, {
     headers: hasFile ? { "Content-Type": "multipart/form-data" } : undefined,
   });
 
@@ -43,18 +43,18 @@ const createSubmission = async (payload) => {
 };
 
 const updateSubmission = async (submissionId, payload) => {
-  const response = await api.patch(`/submissions/${submissionId}`, payload);
+  const response = await api.patch(`/api/submissions/${submissionId}`, payload);
   return unwrapData(response);
 };
 
 const deleteSubmission = async (submissionId) => {
-  const response = await api.delete(`/submissions/${submissionId}`);
+  const response = await api.delete(`/api/submissions/${submissionId}`);
   return unwrapData(response);
 };
 
 const reviewSubmission = async (submissionId, payload) => {
   const response = await api.patch(
-    `/submissions/${submissionId}/review`,
+    `/api/submissions/${submissionId}/review`,
     payload,
   );
   return unwrapData(response);
