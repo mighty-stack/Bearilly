@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-const AuthLayout = ({ title = "Bearily", subtitle = "Learn with simple, focused steps." }) => (
+const AuthLayout = ({ title = "Bearilly", subtitle = "Learn with simple, focused steps." }) => (
   <main className="app-shell d-flex align-items-center py-4">
     <div className="container">
       <div className="row justify-content-center">

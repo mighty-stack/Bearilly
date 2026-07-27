@@ -3,6 +3,8 @@ import { FiArrowRight, FiBookOpen, FiMessageCircle, FiTool } from "react-icons/f
 import { motion } from "framer-motion";
 import Card from "../../Components/common/Card";
 import About from "./About";
+import Tutor from "./Tutor";
+import Testimonials from "./Testimonials";
 
 const features = [
   {
@@ -81,6 +83,8 @@ const Home = () => (
       </div>
     </section>
     <About />
+    <Tutor />
+    <Testimonials />
   </section>
 );
 

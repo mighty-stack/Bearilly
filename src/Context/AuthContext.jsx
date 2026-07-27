@@ -1,9 +1,9 @@
 import { createContext, useCallback, useEffect, useMemo, useState } from "react";
 import authService from "../Services/authService";
 
-export const AuthContext = createContext(null);
+const AuthContext = createContext(null);
 
-export const AuthProvider = ({ children }) => {
+const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [hasAccessCode, setHasAccessCode] = useState(false);
@@ -99,5 +99,7 @@ export const AuthProvider = ({ children }) => {
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
+
+AuthProvider.Context = AuthContext;
 
 export default AuthProvider;

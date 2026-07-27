@@ -10,7 +10,7 @@ const values = [
 const About = () => (
   <section id="about" className="container py-4 py-lg-5">
     <PageHeader
-      title="About Bearily"
+      title="About Bearilly"
       subtitle="A simple learning platform for lessons, AI support, tools, and assessments."
     />
     <Card bodyClassName="p-4">

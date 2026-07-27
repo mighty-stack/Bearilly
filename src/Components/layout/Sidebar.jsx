@@ -18,7 +18,7 @@ const Sidebar = ({ items = defaultItems, admin = false }) => {
   return (
     <aside className="d-none d-lg-flex flex-column position-fixed top-0 start-0 vh-100 bg-white border-end p-3" style={{ width: 260 }}>
       <div className="mb-4">
-        <strong className="fs-4" style={{ color: "var(--primary-color)" }}>Bearily</strong>
+        <strong className="fs-4" style={{ color: "var(--primary-color)" }}>Bearilly</strong>
       </div>
       <nav className="nav flex-column gap-1">
         {navItems.map(({ label, to, icon: Icon }) => (

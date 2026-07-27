@@ -6,25 +6,22 @@ import Home from "../Pages/public/Home"
 import AccessCode from "../Pages/public/AccessCode"
 import Login from "../Pages/public/Login"
 import Register from "../Pages/public/Register"
+import AITutor from "../Pages/app/AITutor"
+import AssessmentCenter from "../Pages/app/AssessmentCenter"
+import AssessmentDetails from "../Pages/app/AssessmentDetails"
+import Dashboard from "../Pages/app/Dashboard"
+import Learning from "../Pages/app/Learning"
+import LessonDetails from "../Pages/app/LessonDetails"
+import Profile from "../Pages/app/Profile"
+import SubmissionHistory from "../Pages/app/SubmissionHistory"
+import ToolkitHub from "../Pages/app/ToolkitHub"
+import AdminDashboard from "../Pages/admin/AdminDashboard"
+import ManageUsers from "../Pages/admin/ManageUsers"
+import ManageCodes from "../Pages/admin/ManageCodes"
+import ManageAssessments from "../Pages/admin/ManageAssessments"
+import ManageSubmissions from "../Pages/admin/ManageSubmission"
 
-import {
-  AITutor,
-  AssessmentCenter,
-  AssessmentDetails,
-  Dashboard,
-  Learning,
-  LessonDetails,
-  Profile,
-  SubmissionHistory,
-  ToolkitHub,
-} from "../Pages/app";
-import {
-  AdminDashboard,
-  ManageAssessments,
-  ManageCodes,
-  ManageSubmissions,
-  ManageUsers,
-} from "../Pages/admin";
+
 import AdminRoute from "./AdminRoute";
 import GuestRoute from "./GuestRoute";
 // import ProtectedRoute from "./ProtectedRoute";

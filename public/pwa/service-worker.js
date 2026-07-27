@@ -2,7 +2,7 @@
    SERVICE WORKER - OFFLINE & CACHING STRATEGY
    ============================================================================ */
 
-const CACHE_NAME = 'bearily-v1';
+const CACHE_NAME = 'bearilly-v1';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -14,8 +14,8 @@ const STATIC_ASSETS = [
   '/styles/animations.css',
 ];
 
-const DYNAMIC_CACHE = 'bearily-dynamic-v1';
-const API_CACHE = 'bearily-api-v1';
+const DYNAMIC_CACHE = 'bearilly-dynamic-v1';
+const API_CACHE = 'bearilly-api-v1';
 
 /* ============================================================================
    INSTALL EVENT - CACHE STATIC ASSETS

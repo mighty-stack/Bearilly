@@ -1,9 +1,0 @@
-export { default as AITutor } from "./AITutor";
-export { default as AssessmentCenter } from "./AssessmentCenter";
-export { default as AssessmentDetails } from "./AssessmentDetails";
-export { default as Dashboard } from "./Dashboard";
-export { default as Learning } from "./Learning";
-export { default as LessonDetails } from "./LessonDetails";
-export { default as Profile } from "./Profile";
-export { default as SubmissionHistory } from "./SubmissionHistory";
-export { default as ToolkitHub } from "./ToolKitHub";

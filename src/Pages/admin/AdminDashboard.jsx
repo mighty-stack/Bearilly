@@ -26,7 +26,7 @@ const AdminDashboard = () => {
           ];
           setStats(nextStats);
         }
-      } catch (error) {
+      } catch {
         if (!ignore) {
           setStats([]);
         }

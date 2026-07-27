@@ -9,7 +9,21 @@ const Navbar = ({ title = "Learning App", user, onMenuClick, onProfileClick }) =
           <Button variant="ghost" className="d-lg-none px-2" icon={FiMenu} onClick={onMenuClick}>
             <span className="visually-hidden">Menu</span>
           </Button>
-          <strong className="fs-5 text-truncate">{title}</strong>
+          <div className="d-flex align-items-center gap-2">
+            <img
+              src="/favicon.png"
+              alt="Bearilly logo"
+              width={28}
+              height={28}
+              style={{ display: "inline-block" }}
+            />
+            <div className="d-flex flex-column">
+              <strong className="fs-5 text-truncate">Bearilly</strong>
+              {title && title !== "Bearilly" && (
+                <small className="text-muted">{title}</small>
+              )}
+            </div>
+          </div>
         </div>
         <div className="d-flex align-items-center gap-2">
           <Button variant="ghost" className="px-2" icon={FiBell}>
@@ -20,6 +34,7 @@ const Navbar = ({ title = "Learning App", user, onMenuClick, onProfileClick }) =
             <span className="rounded-circle bg-light border d-inline-flex align-items-center justify-content-center" style={{ width: 36, height: 36 }}>
               <FiUser aria-hidden="true" />
             </span>
+
           </button>
         </div>
       </div>
