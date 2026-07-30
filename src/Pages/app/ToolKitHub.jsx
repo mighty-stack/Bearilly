@@ -7,7 +7,7 @@ import ToolGrid from "../../Components/toolkit/ToolGrid";
 import ToolSearch from "../../Components/toolkit/ToolSearch";
 import toolkitService from "../../Services/toolkitService";
 
-const ToolkitHub = () => {
+const ToolKitHub = () => {
   const [tools, setTools] = useState([]);
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("All");
@@ -66,4 +66,4 @@ const ToolkitHub = () => {
   );
 };
 
-export default ToolkitHub;
+export default ToolKitHub;

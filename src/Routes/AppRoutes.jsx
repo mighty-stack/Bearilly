@@ -14,7 +14,7 @@ import Learning from "../Pages/app/Learning"
 import LessonDetails from "../Pages/app/LessonDetails"
 import Profile from "../Pages/app/Profile"
 import SubmissionHistory from "../Pages/app/SubmissionHistory"
-import ToolkitHub from "../Pages/app/ToolkitHub"
+import ToolKitHub from "../Pages/app/ToolKitHub"
 import AdminDashboard from "../Pages/admin/AdminDashboard"
 import ManageUsers from "../Pages/admin/ManageUsers"
 import ManageCodes from "../Pages/admin/ManageCodes"
@@ -87,7 +87,7 @@ const AppRoutes = ({
         <Route path="learning" element={<Learning />} />
         <Route path="learning/:lessonId" element={<LessonDetails />} />
         <Route path="ai-tutor" element={<AITutor />} />
-        <Route path="toolkit" element={<ToolkitHub />} />
+        <Route path="toolkit" element={<ToolKitHub />} />
         <Route path="assessments" element={<AssessmentCenter />} />
         <Route path="assessments/:assessmentId" element={<AssessmentDetails />} />
         <Route path="submissions" element={<SubmissionHistory />} />
