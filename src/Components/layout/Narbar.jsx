@@ -1,4 +1,5 @@
 import { FiBell, FiMenu, FiUser } from "react-icons/fi";
+import { Link } from "react-router-dom";
 import Button from "../common/Button";
 
 const Navbar = ({ title = "Learning App", user, onMenuClick, onProfileClick }) => (
@@ -29,13 +30,19 @@ const Navbar = ({ title = "Learning App", user, onMenuClick, onProfileClick }) =
           <Button variant="ghost" className="px-2" icon={FiBell}>
             <span className="visually-hidden">Notifications</span>
           </Button>
-          <button className="btn d-flex align-items-center gap-2 p-1" type="button" onClick={onProfileClick}>
-            <span className="d-none d-sm-inline fw-semibold">{user?.name || "Student"}</span>
+          <Link
+            to="/app/profile"
+            className="btn d-flex align-items-center gap-2 p-1 text-decoration-none text-dark"
+            type="button"
+            onClick={onProfileClick}
+          >
+            <span className="d-none d-sm-inline fw-semibold">
+              {user?.fullName || user?.name || user?.email || "Student"}
+            </span>
             <span className="rounded-circle bg-light border d-inline-flex align-items-center justify-content-center" style={{ width: 36, height: 36 }}>
               <FiUser aria-hidden="true" />
             </span>
-
-          </button>
+          </Link>
         </div>
       </div>
     </div>
