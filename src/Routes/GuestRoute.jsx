@@ -6,7 +6,7 @@ const GuestRoute = ({
   redirectTo,
   children,
 }) => {
-  const defaultRedirect = hasAccessCode ? "/app/dashboard" : "/access-code";
+  const defaultRedirect = "/app/dashboard";
 
   if (isAuthenticated) {
     return <Navigate to={redirectTo || defaultRedirect} replace />;

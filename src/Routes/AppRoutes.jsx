@@ -3,7 +3,7 @@ import AuthLayout from "../Components/layout/AuthLayout";
 import DashboardLayout from "../Components/layout/DashboardLayout";
 import PublicLayout from "../Components/layout/PublicLayout";
 import Home from "../Pages/public/Home"
-import AccessCode from "../Pages/public/AccessCode"
+// import AccessCode from "../Pages/public/AccessCode"
 import Login from "../Pages/public/Login"
 import Register from "../Pages/public/Register"
 import AITutor from "../Pages/app/AITutor"
@@ -55,22 +55,19 @@ const AppRoutes = ({
         </Route>
       </Route>
 
+      {/*
       <Route
         path="/access-code"
         element={
-          // <ProtectedRoute
-          //   isAuthenticated={isAuthenticated}
-          //   hasAccessCode
-          // >
-            <AuthLayout
-              title="Unlock your learning"
-              subtitle="Enter your access code to continue."
-            />
-          // </ProtectedRoute>
+          <AuthLayout
+            title="Unlock your learning"
+            subtitle="Enter your access code to continue."
+          />
         }
       >
         <Route index element={<AccessCode />} />
       </Route>
+      */}
 
       <Route
         path="/app"

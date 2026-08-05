@@ -6,7 +6,10 @@ import "./Styles/component.css";
 const getAuthSnapshot = () => ({
   user: typeof window !== "undefined" ? authService.getCurrentUser() : null,
   isAuthenticated: typeof window !== "undefined" ? authService.isAuthenticated() : false,
-  hasAccessCode: typeof window !== "undefined" ? authService.hasVerifiedAccessCode() : false,
+  hasAccessCode:
+    typeof window !== "undefined"
+      ? authService.isAuthenticated() || authService.hasVerifiedAccessCode()
+      : false,
 });
 
 const App = () => {
