@@ -20,7 +20,7 @@ import ManageUsers from "../Pages/admin/ManageUsers"
 import ManageCodes from "../Pages/admin/ManageCodes"
 import ManageAssessments from "../Pages/admin/ManageAssessments"
 import ManageSubmissions from "../Pages/admin/ManageSubmission"
-
+import AdminLogin from "../Pages/admin/AdminLogin"
 
 import AdminRoute from "./AdminRoute";
 import GuestRoute from "./GuestRoute";
@@ -51,6 +51,7 @@ const AppRoutes = ({
         <Route element={<AuthLayout />}>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
         </Route>
       </Route>
 

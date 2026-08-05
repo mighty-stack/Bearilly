@@ -82,6 +82,11 @@ const login = async (payload) => {
   return saveAuthSession(normalizeAuthResponse(response));
 };
 
+const adminLogin = async (payload) => {
+  const response = await api.post("/api/admin/login", payload);
+  return saveAuthSession(normalizeAuthResponse(response));
+};
+
 const verifyAccessCode = async (code) => {
   const response = await api.post("/api/auth/access-code", { code });
   const data = unwrapData(response);
@@ -133,6 +138,7 @@ const authService = {
   isAuthenticated,
   isTokenExpired,
   login,
+  adminLogin,
   logout,
   register,
   saveAuthSession,

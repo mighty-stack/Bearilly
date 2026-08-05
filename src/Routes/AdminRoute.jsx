@@ -3,7 +3,7 @@ import { Navigate, Outlet, useLocation } from "react-router-dom";
 const AdminRoute = ({
   isAuthenticated = false,
   isAdmin = false,
-  redirectTo = "/login",
+  redirectTo = "/admin/login",
   fallbackPath = "/app/dashboard",
   children,
 }) => {

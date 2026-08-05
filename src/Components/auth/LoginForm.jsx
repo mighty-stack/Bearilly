@@ -5,10 +5,19 @@ import Button from "../common/Button";
 import Card from "../common/Card";
 import Input from "../common/Input";
 
-const LoginForm = ({ initialValues = { email: "", password: "" }, validationSchema, onSubmit, loading = false }) => (
+const LoginForm = ({
+  initialValues = { email: "", password: "" },
+  validationSchema,
+  onSubmit,
+  loading = false,
+  title = "Welcome back",
+  subtitle = "Log in to continue learning.",
+  submitLabel = "Log in",
+  showRegisterLink = true,
+}) => (
   <Card>
-    <h2 className="h4 fw-bold mb-1">Welcome back</h2>
-    <p className="text-muted-app mb-4">Log in to continue learning.</p>
+    <h2 className="h4 fw-bold mb-1">{title}</h2>
+    <p className="text-muted-app mb-4">{subtitle}</p>
     <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
       {({ values, errors, touched, handleChange, handleBlur }) => (
         <Form>
@@ -37,11 +46,13 @@ const LoginForm = ({ initialValues = { email: "", password: "" }, validationSche
             onBlur={handleBlur}
           />
           <Button type="submit" fullWidth icon={FiLogIn} loading={loading}>
-            Log in
+            {submitLabel}
           </Button>
-          <p className="text-center mt-3 mb-0 text-muted-app">
-            New here? <Link to="/register">Create account</Link>
-          </p>
+          {showRegisterLink && (
+            <p className="text-center mt-3 mb-0 text-muted-app">
+              New here? <Link to="/register">Create account</Link>
+            </p>
+          )}
         </Form>
       )}
     </Formik>
